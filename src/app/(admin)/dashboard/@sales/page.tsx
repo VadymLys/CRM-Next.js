@@ -15,7 +15,7 @@ export default async function Page({}: PageProps) {
       <SummaryTable
         headers={
           <>
-            <SummaryTableHeader align="center">Company</SummaryTableHeader>
+            <SummaryTableHeader>Company</SummaryTableHeader>
             <SummaryTableHeader align="center">Sold</SummaryTableHeader>
             <SummaryTableHeader align="center">Income</SummaryTableHeader>
           </>
@@ -23,7 +23,7 @@ export default async function Page({}: PageProps) {
       >
         {data.map(({ companyId, companyTitle, sold, income }) => (
           <tr key={companyId}>
-            <SummaryTableCell align="center">{companyTitle}</SummaryTableCell>
+            <SummaryTableCell>{companyTitle}</SummaryTableCell>
             <SummaryTableCell align="center">{sold}</SummaryTableCell>
             <SummaryTableCell align="center">{`$${income}`}</SummaryTableCell>
           </tr>
